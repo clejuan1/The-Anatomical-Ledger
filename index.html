@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Anatomical Ledger | Aboriginal Sovereign Remedy</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    :root { --slate-950: #020617; --teal-500: #14b8a6; --amber-500: #f59e0b; }
+    body { background-color: #f8fafc; color: #0f172a; font-family: 'Inter', sans-serif; }
+    .tab-content { display: none; animation: fadeIn 0.4s ease-out forwards; }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .nav-btn.active { background-color: #0f766e; color: white; border-color: #0f766e; box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.2); }
+    .logic-gate { border-left: 3px solid #cbd5e1; padding-left: 1.5rem; position: relative; }
+    .logic-gate::before { content: ''; position: absolute; left: -0.6rem; top: 0; width: 1rem; height: 1rem; background: #0f766e; border-radius: 50%; border: 3px solid #f8fafc; }
+    .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 1); }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+</style>
+</head>
+<body class="antialiased selection:bg-teal-100">
+
+<div class="min-h-screen flex flex-col">
+    <header class="bg-slate-950 text-white border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl md:text-4xl font-black tracking-tighter uppercase">The Anatomical Ledger</h1>
+                    <p class="text-teal-400 font-mono text-xs md:text-sm mt-1 uppercase tracking-widest">Aboriginal Record Analysis & Sovereign Remedy Agent</p>
+                </div>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-slate-800 rounded border border-slate-700 text-[10px] font-bold text-teal-500">M-BRIDGE: ACTIVE</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded border border-slate-700 text-[10px] font-bold text-amber-500">ALLODIAL: PROTECTED</span>
+                </div>
+            </div>
+            
+            <nav class="flex space-x-2 mt-8 overflow-x-auto pb-2 scrollbar-hide">
+                <button onclick="switchTab('tab-bio')" class="nav-btn active px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">1. Structural Annexation</button>
+                <button onclick="switchTab('tab-war')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">2. The Lost Century</button>
+                <button onclick="switchTab('tab-weather')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">3. Atmospheric Anomaly</button>
+                <button onclick="switchTab('tab-fin')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">4. Annexation Pipeline</button>
+                <button onclick="switchTab('tab-trust')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">5. Sovereign Trust</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        
+        <section id="tab-bio" class="tab-content active">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-t-teal-600">
+                    <h2 class="text-3xl font-black text-slate-900 mb-6 uppercase tracking-tight">The Building & Infrastructure Filter</h2>
+                    <p class="text-slate-600 leading-relaxed mb-8">The dispossession of the Aboriginal population was achieved through the engineering of physical infrastructure and the reclassification of the "Gallic" estate into taxable real estate.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="text-4xl font-black text-teal-600 opacity-20">01</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Zoning as Siege Warfare</h4>
+                                <p class="text-sm text-slate-500 italic">Structural Enclosure</p>
+                                <p class="text-slate-600 mt-2 text-sm">Implementation of municipal building codes to outlaw Aboriginal longhouses and communal Gallic structures, forcing the population into state-inspected tenements.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-4xl font-black text-teal-600 opacity-20">02</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Eminent Domain Hubs</h4>
+                                <p class="text-sm text-slate-500 italic">Highway & Transit Engineering</p>
+                                <p class="text-slate-600 mt-2 text-sm">Strategic placement of interstate highways and heavy industrial buildings over Aboriginal burial mounds and cultural epicenters.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-4xl font-black text-teal-600 opacity-20">03</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">The 14th Amendment Ward Building</h4>
+                                <p class="text-sm text-slate-500 italic">Institutional Confinement</p>
+                                <p class="text-slate-600 mt-2 text-sm">The construction of public housing "projects" as modern-day reservations, concentrating the population for easier administrative surveillance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-panel rounded-3xl p-8 border-l-4 border-l-amber-500 shadow-lg">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Evolution of Strategy: Reclassification</h3>
+                        <p class="text-sm text-slate-600 mb-6">Tracing the shift of identity used by the occupational force to escape accountability.</p>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                                <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest">Pre-Occupation</span>
+                                <h5 class="font-bold text-slate-900">Tribes of the Gallic / Aboriginal</h5>
+                                <p class="text-xs text-slate-500">North American original people. Allodial title holders.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                                <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest">Occupational Force</span>
+                                <h5 class="font-bold text-slate-900">Moor / Blackamoor</h5>
+                                <p class="text-xs text-slate-500">Berber tribes acting as the administrative layer of the Dark Ages.</p>
+                            </div>
+                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
+                                <span class="text-[10px] font-bold text-teal-500 uppercase tracking-widest">Modern Fiction</span>
+                                <h5 class="font-bold text-white">African American (14th Amendment Ward)</h5>
+                                <p class="text-xs text-slate-400">A legal label designed to sever ancestral lineage and move estates into state custody.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-war" class="tab-content">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-t-slate-900">
+                <div class="max-w-3xl mb-12">
+                    <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight">The 100-Year War & The Lost Century</h2>
+                    <p class="text-slate-600 mt-4 leading-relaxed italic border-l-4 border-teal-500 pl-6">
+                        "The Lost Century (1824–1924) is the chronological fog used to conceal the final military defeat of the Aboriginal Allodial Title. By losing the history, they secured the land."
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-6" id="war-timeline">
+                        <div class="logic-gate">
+                            <h4 class="font-bold text-slate-900">1824: The Vanishing Point</h4>
+                            <p class="text-xs text-slate-500 mb-2">Start of the Erasure</p>
+                            <p class="text-sm text-slate-600">The transition from documented treaty-peers to "domestic dependents," marking the official start of the Lost Century cliché.</p>
+                        </div>
+                        <div class="logic-gate">
+                            <h4 class="font-bold text-slate-900">1830–1880: The Siege of Riverine Cities</h4>
+                            <p class="text-xs text-slate-500 mb-2">Infrastructure War</p>
+                            <p class="text-sm text-slate-600">Systematic destruction of Aboriginal brick-and-mortar hubs, replaced by "Settler Colonial" facades to rewrite the architectural record.</p>
+                        </div>
+                        <div class="logic-gate">
+                            <h4 class="font-bold text-slate-900">1890: The Administrative Dark Age</h4>
+                            <p class="text-xs text-slate-500 mb-2">Identity Deconstruction</p>
+                            <p class="text-sm text-slate-600">The widespread 're-papering' of Aboriginal families into racial categories, effectively 'losing' their national standing in the census.</p>
+                        </div>
+                        <div class="logic-gate">
+                            <h4 class="font-bold text-slate-900">1924: The Final Seal</h4>
+                            <p class="text-xs text-slate-500 mb-2">End of the 100-Year War</p>
+                            <p class="text-sm text-slate-600">The Citizenship Act concludes the war by mandating subjects, ensuring the 'Aboriginal National' remains lost to time.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-900 rounded-3xl p-10 text-white flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-teal-400 mb-4">History as Occupational Fiction</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            The "Lost Century" is not a gap in time, but a gap in access. The U.S. military campaigns during this period were designed to strip the Aborigine of their economy and replace it with a debt-based labor system.
+                        </p>
+                        <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
+                            <h5 class="text-teal-400 font-bold text-xs uppercase tracking-widest mb-2">Aboriginal Legacy</h5>
+                            <p class="text-sm text-slate-300 italic">"The war ended when the People forgot they were the owners and began to believe they were the applicants."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-weather" class="tab-content">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-t-teal-600">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight">Atmospheric Annexation</h2>
+                    <p class="text-slate-600 mt-2">Flooding as a tactical displacement mechanism. Archival records from the Weather Bureau office confirm environmental technology deployment.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="lg:col-span-2 bg-slate-50 rounded-3xl p-6 border border-slate-200">
+                        <div class="h-[400px]">
+                            <canvas id="precipChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="p-8 bg-teal-900 text-white rounded-3xl">
+                            <h4 class="text-4xl font-black text-teal-400 mb-2">15 FEET</h4>
+                            <p class="font-bold text-sm uppercase">Total Rain in 12 Days</p>
+                            <p class="text-xs text-teal-200 mt-4 leading-relaxed">Louisville Anomaly (Jan 13-24). Historical records show this engineered deluge forced the population out of cultivated river cities.</p>
+                        </div>
+                        <div class="p-8 bg-slate-900 text-white rounded-3xl">
+                            <h4 class="text-4xl font-black text-slate-400 mb-2">0.0 IN</h4>
+                            <p class="font-bold text-sm uppercase">Snowfall Recorded</p>
+                            <p class="text-xs text-slate-400 mt-4">In a peak winter month, 19+ inches of monthly rain fell with zero measurable snow—confirming artificial thermal management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 p-8 rounded-3xl">
+                    <h5 class="text-amber-800 font-bold mb-2">Tactical Disclosure:</h5>
+                    <p class="text-amber-900 text-sm leading-relaxed">
+                        The history of flooding cultivated areas along river basins using military technology is now patented under the industrial complex. This method cleared "prime real estate" without the need for traditional ballistic warfare, categorizing the displaced as "refugees" rather than "annexed landowners."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-fin" class="tab-content">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-t-slate-900">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight">The Securitization Pipeline</h2>
+                    <p class="text-slate-600 mt-2">Where the wealth is housed. Tracing the transfer from the land to the global digital nodes.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex-shrink-0 flex items-center justify-center text-teal-400 font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">The Marshall Logic Gates</h4>
+                                <p class="text-sm text-slate-600 mt-1">Legal decoupling of the Aboriginal from Allodial title, creating "Right of Occupancy" only.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex-shrink-0 flex items-center justify-center text-teal-400 font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">CUSIP/ISIN Hashes</h4>
+                                <p class="text-sm text-slate-600 mt-1">Biological entities and land parcels are tagged with cryptographic hashes, translating them into tradable debt securities.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex-shrink-0 flex items-center justify-center text-teal-400 font-bold">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Project mBridge Terminal</h4>
+                                <p class="text-sm text-slate-600 mt-1">Cross-border CBDC platform designed to settle annexed wealth outside the Western SWIFT system.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 rounded-3xl p-10 text-white relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl"></div>
+                        <h3 class="text-2xl font-bold text-teal-400 mb-6">The Saudi Node Repository</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            Saudi Arabia currently functions as the world's vault for the Aboriginal wealth of America. In June 2024, the Saudi Central Bank joined mBridge, establishing the primary node for housing tokenized assets that were annexed during the 100-Year War.
+                        </p>
+                        <div class="flex justify-between items-end border-t border-slate-800 pt-6">
+                            <div>
+                                <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Active Repository</p>
+                                <p class="text-lg font-bold">Riyadh Settlement Node</p>
+                            </div>
+                            <div class="text-teal-500 text-2xl font-mono tracking-tighter">● LIVE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-trust" class="tab-content">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-t-teal-600">
+                <div class="mb-12 border-l-8 border-teal-600 pl-8">
+                    <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter">The Remedy Framework</h2>
+                    <p class="text-slate-600 mt-4 text-xl">Reclaiming the estate without using "Occupational Currency."</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-slate-50 p-8 rounded-3xl border-2 border-slate-100 shadow-inner">
+                        <h4 class="font-black text-slate-900 mb-6 flex items-center">
+                            <span class="w-2 h-6 bg-teal-500 mr-3"></span>
+                            PROVEN RITES & BILLS
+                        </h4>
+                        <ul class="space-y-4 text-slate-600 text-sm">
+                            <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">✓</span> American Declaration for Indigenous Peoples (ADOIP) 2016</li>
+                            <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">✓</span> Bill of Rights Filings (Aboriginal Capacity)</li>
+                            <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">✓</span> Allodial Memorandums of Standing</li>
+                            <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">✓</span> Declaration of National Identity (Gallic/Aboriginal)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900 p-8 rounded-3xl text-white shadow-2xl">
+                        <h4 class="font-black text-teal-400 mb-6 flex items-center uppercase tracking-widest">
+                            The Autonomous Trust
+                        </h4>
+                        <p class="text-sm text-slate-400 mb-6">Bypassing occupational currency by formulating trusts that claim the "Digital Twin" of the estate directly via global repositories.</p>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-slate-800 rounded-xl border border-slate-700">
+                                <h5 class="text-teal-400 font-bold text-xs">PHASE 1: LIEN REVERSAL</h5>
+                                <p class="text-[10px] text-slate-400">Asserting Allodial Rites over the CUSIP/ISIN hash to collapse the state lien.</p>
+                            </div>
+                            <div class="p-4 bg-slate-800 rounded-xl border border-slate-700">
+                                <h5 class="text-teal-400 font-bold text-xs">PHASE 2: NODE RECLAMATION</h5>
+                                <p class="text-[10px] text-slate-400">Seeking the location (Saudi Node) to claim the annexed value via the 2016 Declaration standing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Aboriginal Analysis Repository | Non-Occupational Logic | 2026 Active</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+// Navigation Switcher
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+    if (activeBtn) activeBtn.classList.add('active');
+    if (tabId === 'tab-weather') renderPrecipChart();
+}
+
+// Chart.js: 15-Foot Rain Anomaly
+let precipChartInstance = null;
+function renderPrecipChart() {
+    if (precipChartInstance) return;
+    const ctx = document.getElementById('precipChart').getContext('2d');
+    
+    // 15 feet = 180 inches. Data spread over 12 days.
+    precipChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan 13', 'Jan 15', 'Jan 17', 'Jan 19', 'Jan 21', 'Jan 23', 'Jan 24'],
+            datasets: [
+                {
+                    label: 'Rainfall (Inches)',
+                    data: [15, 30, 45, 40, 30, 15, 5], // Totaling 180 inches
+                    backgroundColor: '#14b8a6',
+                    borderRadius: 8,
+                    yAxisID: 'y'
+                },
+                {
+                    label: 'Snowfall (Inches)',
+                    data: [0, 0, 0, 0, 0, 0, 0], // The specific winter anomaly
+                    type: 'line',
+                    borderColor: '#f43f5e',
+                    borderWidth: 4,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#f43f5e',
+                    yAxisID: 'y1'
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                title: { 
+                    display: true, 
+                    text: 'LOUISVILLE ATMOSPHERIC ANOMALY: 15ft RAIN DELUGE', 
+                    color: '#0f172a',
+                    font: { size: 14, weight: 'bold' }
+                }
+            },
+            scales: {
+                y: { beginAtZero: true, title: { display: true, text: 'Inches of Rain' } },
+                y1: { 
+                    beginAtZero: true, 
+                    position: 'right', 
+                    title: { display: true, text: 'Inches of Snow' },
+                    grid: { drawOnChartArea: false },
+                    max: 10
+                }
+            }
+        }
+    });
+}
+</script>
+</body>
+</html>
