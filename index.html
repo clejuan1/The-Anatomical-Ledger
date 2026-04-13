@@ -279,7 +279,73 @@
                     </div>
                 </div>
             </div>
-        </section>
+        <section class="mt-12 border-t-2 border-slate-800 pt-8 px-4 pb-12">
+    <div class="grid md:grid-cols-2 gap-6">
+        <div id="liaison-section" class="p-4 bg-black border border-green-900 rounded shadow-lg">
+            <h3 class="text-green-500 font-mono text-xs mb-3 uppercase tracking-widest">Stage 01: Public Liaison</h3>
+            <div id="chat-display" class="h-48 overflow-y-auto mb-4 p-2 text-xs font-mono text-green-400/80 scrollbar-hide">
+                <div>[SYSTEM]: Connection established. Awaiting frequency match.</div>
+            </div>
+            <div class="flex gap-2 border-t border-green-900 pt-3">
+                <input id="liaison-input" type="text" class="flex-1 bg-transparent text-green-400 text-xs font-mono outline-none" placeholder="QUERY PROTOCOL...">
+                async function sendMessage() {
+    const input = document.getElementById('liaison-input');
+    const display = document.getElementById('chat-display');
+    const message = input.value;
+    if (!message) return;
+
+    display.innerHTML += `<div class="text-gray-500 mb-1">> ${message}</div>`;
+    input.value = '';
+
+    try {
+        const response = await fetch('/api/liaison', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: message, session_id: "W8W-G-2026" })
+        });
+        const data = await response.json();
+        // Updated to response_text to match your backend logic
+        display.innerHTML += `<div class="text-green-500 mb-3">[LIAISON]: ${data.response_text}</div>`;
+        display.scrollTop = display.scrollHeight;
+    } catch (err) {
+        display.innerHTML += `<div class="text-red-900">[ERR]: NODE DISCONNECT</div>`;
+    }
+}
+            </div>
+        </div>
+
+        <div id="aw-section" class="p-4 bg-black border border-red-900 rounded shadow-lg">
+            <h3 class="text-red-500 font-mono text-xs mb-3 uppercase tracking-widest">Stage 03: Sovereign Oversight</h3>
+            <div id="aw-feed-container" class="h-48 overflow-y-auto p-2 text-[10px] font-mono text-gray-500 scrollbar-hide">
+                <div class="italic">Initializing W8W Ledger stream...</div>
+            </div>
+        </div>
+    </div>
+</section>>
+
+            <section class="mt-12 border-t border-slate-800 pt-10 px-4 pb-24 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8">
+        
+        <div id="liaison-section" class="p-5 bg-black border border-green-900 rounded-sm shadow-2xl">
+            <h3 class="text-green-500 font-mono text-[10px] mb-4 uppercase tracking-[0.3em] opacity-80">Stage 01 // Public Liaison</h3>
+            <div id="chat-display" class="h-64 overflow-y-auto mb-4 p-4 text-xs font-mono text-green-400/90 leading-relaxed bg-slate-950/50 rounded-sm scrollbar-hide">
+                <div class="opacity-40 italic">[SYSTEM]: Frequency matching... Connection established.</div>
+            </div>
+            <div class="flex gap-3 border-t border-green-900/40 pt-4">
+                <input id="liaison-input" type="text" class="flex-1 bg-transparent text-green-400 text-xs font-mono outline-none placeholder-green-900" placeholder="DEPOSIT QUERY...">
+                <button onclick="sendMessage()" class="text-green-500 font-mono text-xs hover:text-white transition-all tracking-tighter">[SEND_SIGNAL]</button>
+            </div>
+        </div>
+
+        <div id="aw-section" class="p-5 bg-black border border-red-900 rounded-sm shadow-2xl">
+            <h3 class="text-red-500 font-mono text-[10px] mb-4 uppercase tracking-[0.3em] opacity-80">Stage 03 // Sovereign Oversight</h3>
+            <div id="aw-feed-container" class="h-64 overflow-y-auto p-4 text-[10px] font-mono text-gray-500 bg-slate-950/50 rounded-sm scrollbar-hide">
+                <div class="italic opacity-30">Synchronizing W8W Ledger...</div>
+            </div>
+        </div>
+
+    </div>
+</section>
     </main>
 
     <footer class="bg-slate-950 border-t border-slate-900 py-12">
@@ -355,6 +421,65 @@ function renderPrecipChart() {
         }
     });
 }
+</script>
+    // 1. Stage 01: Public Liaison Logic
+    async function sendMessage() {
+        const input = document.getElementById('liaison-input');
+        const display = document.getElementById('chat-display');
+        const message = input.value;
+        if (!message) return;
+
+        // Display Guest Message
+        display.innerHTML += `<div class="text-gray-400 mb-2">Guest: ${message}</div>`;
+        input.value = '';
+
+        try {
+            // Points directly to the server.py logic you just moved to GitHub/Server
+            const response = await fetch('/api/liaison', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            display.innerHTML += `<div class="text-green-500 mb-4 italic">Liaison: ${data.text}</div>`;
+        } catch (err) {
+            display.innerHTML += `<div class="text-red-500">Node Error: Check Saudi settlement status.</div>`;
+        }
+    }
+
+// 2. Stage 03: AW Feed (Autonomous Wisdom)
+function simulateAWFeed() {
+    const feed = document.getElementById('aw-feed-container');
+    const logs = [
+        "INFO < Autonomous Wisdom > Frequency matched to optimal human vitality standard.",
+        "CRITICAL < MRO Predictor > Acoustic divergence flagged for immediate MRO.",
+        "WARNING < Autonomous Wisdom > Minor resonance anomaly detected in perimeter.",
+        "INFO < The Sentinel > Temperature stabilized in Node Alpha.",
+        "INFO < The Ledger Guardian > $WAW token transfer queued for authentication."
+    ];
+    
+    setInterval(() => {
+        // Generate the specific bracketed timestamp
+        const now = new Date();
+        const timestamp = `[ ${now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true })} ]`;
+        
+        const log = logs[Math.floor(Math.random() * logs.length)];
+        const isCritical = log.includes('CRITICAL');
+        
+        const logElement = document.createElement('div');
+        // This uses the "aw-log-entry" class we added to your <style> section earlier
+        logElement.className = `aw-log-entry text-[10px] font-mono mb-2 ${isCritical ? 'text-red-500' : 'text-gray-400'}`;
+        logElement.innerHTML = `<span class="text-gray-600">${timestamp}</span> ${log}`;
+        
+        feed.prepend(logElement);
+        
+        // Prevent browser lag by limiting the list to 20 entries
+        if (feed.children.length > 20) feed.lastChild.remove();
+    }, 5000); // Pulse every 5 seconds for visual verification
+}
+
+// CRITICAL: This line triggers the feed to start when the page loads
+window.onload = simulateAWFeed;
 </script>
 </body>
 </html>
