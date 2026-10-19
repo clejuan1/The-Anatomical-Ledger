@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liaison — The Anatomical Ledger</title>
+<link href="https://cdn.tailwindcss.com" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background:#0b1220; color:#bfe9d7; }
+  .chat { max-width:800px; margin:3rem auto; padding:1.5rem; border-radius:12px; background:#071018; border:1px solid #123; }
+  .chat-display { height:380px; overflow:auto; font-family:monospace; font-size:13px; padding:1rem; background:#02060a; border-radius:8px; }
+  .chat-input { display:flex; gap:8px; margin-top:1rem; }
+  input { flex:1; padding:10px 12px; border-radius:8px; background:transparent; color:#bfe9d7; border:1px solid #123; }
+  button { padding:8px 12px; border-radius:8px; background:#0f766e; color:#fff; border:none; }
+  .meta { color:#6fbfba; font-size:12px; margin-bottom:8px; }
+</style>
+</head>
+<body>
+  <main class="chat">
+    <div class="meta">Liaison Interface — client communicates with <code>/api/liaison</code> (server-side only)</div>
+    <div id="chat-display" class="chat-display">[SYSTEM]: Liaison ready. All keys must remain server-side.</div>
+    <div class="chat-input">
+      <input id="liaison-input" placeholder="Type your query and press Enter or SEND" autocomplete="off">
+      <button id="send-btn">SEND</button>
+    </div>
+    <p style="margin-top:12px; font-size:12px; color:#6fbfba">Note: This page intentionally omits any API keys. Ensure your server provides <code>/api/liaison</code> and that secrets are stored in env vars or Secret Manager.</p>
+  </main>
+
+<script>
+async function sendMessage() {
+  const input = document.getElementById('liaison-input');
+  const display = document.getElementById('chat-display');
+  if (!input || !display) return;
+  const text = input.value.trim();
+  if (!text) return;
+  // append user message
+  const userEl = document.createElement('div'); userEl.style.color='#9fd6c5'; userEl.textContent = `> ${text}`; display.appendChild(userEl);
+  input.value = '';
+  display.scrollTop = display.scrollHeight;
+
+  try {
+    const res = await fetch('/api/liaison', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text })
+    });
+    const json = await res.json();
+    const reply = json.response_text || json.reply || (json.error ? `ERROR: ${json.error}` : 'No reply');
+    const botEl = document.createElement('div'); botEl.style.color='#bfe9d7'; botEl.style.marginTop='6px'; botEl.textContent = `LIAISON: ${reply}`; display.appendChild(botEl);
+    display.scrollTop = display.scrollHeight;
+  } catch (err) {
+    const errEl = document.createElement('div'); errEl.style.color='#ff7b7b'; errEl.textContent = 'Network error: could not reach /api/liaison'; display.appendChild(errEl);
+    display.scrollTop = display.scrollHeight;
+    console.error(err);
+  }
+}
+
+document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('liaison-input').addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+</script>
+</body>
+</html>
