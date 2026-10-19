@@ -410,17 +410,20 @@ function renderPrecipChart() {
             },
             scales: {
                 y: { beginAtZero: true, title: { display: true, text: 'Inches of Rain' } },
-                y1: { 
-                    beginAtZero: true, 
-                    position: 'right', 
-                    title: { display: true, text: 'Inches of Snow' },
-                    grid: { drawOnChartArea: false },
-                    max: 10
-                }
-            }
+y1: {
+            beginAtZero: true,
+            position: 'right',
+            title: { display: true, text: 'Inches of Snow' },
+            grid: { drawOnChartArea: false },
+            max: 10
         }
-    });
+    }
 }
+}
+);
+}
+}
+</script>
 <script>
 // 1. Stage 01: Public Liaison Logic (Direct Browser-to-Gemini Call)
 async function sendMessage() {
