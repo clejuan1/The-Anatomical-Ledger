@@ -17,6 +17,7 @@
     .logic-gate::before { content: ''; position: absolute; left: -0.6rem; top: 0; width: 1rem; height: 1rem; background: #0f766e; border-radius: 50%; border: 3px solid #f8fafc; }
     .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 1); }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .aw-log-entry { white-space: pre-wrap; }
 </style>
 </head>
 <body class="antialiased selection:bg-teal-100">
@@ -36,11 +37,11 @@
             </div>
             
             <nav class="flex space-x-2 mt-8 overflow-x-auto pb-2 scrollbar-hide">
-                <button onclick="switchTab('tab-bio')" class="nav-btn active px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">1. Structural Annexation</button>
-                <button onclick="switchTab('tab-war')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">2. The Lost Century</button>
-                <button onclick="switchTab('tab-weather')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">3. Atmospheric Anomaly</button>
-                <button onclick="switchTab('tab-fin')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">4. Annexation Pipeline</button>
-                <button onclick="switchTab('tab-trust')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap uppercase tracking-widest">5. Sovereign Trust</button>
+                <button onclick="switchTab('tab-bio')" class="nav-btn active px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap">BIO</button>
+                <button onclick="switchTab('tab-war')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap">WAR</button>
+                <button onclick="switchTab('tab-weather')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap">WEATHER</button>
+                <button onclick="switchTab('tab-fin')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap">FINANCE</button>
+                <button onclick="switchTab('tab-trust')" class="nav-btn px-5 py-2.5 text-xs font-bold rounded-full border border-slate-700 text-slate-400 hover:bg-slate-800 transition-all whitespace-nowrap">TRUST</button>
             </nav>
         </div>
     </header>
@@ -51,7 +52,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-xl border-t-4 border-t-teal-600">
                     <h2 class="text-3xl font-black text-slate-900 mb-6 uppercase tracking-tight">The Building & Infrastructure Filter</h2>
-                    <p class="text-slate-600 leading-relaxed mb-8">The dispossession of the Aboriginal population was achieved through the engineering of physical infrastructure and the reclassification of the "Gallic" estate into taxable real estate.</p>
+                    <p class="text-slate-600 leading-relaxed mb-8">The dispossession of the Aboriginal population was achieved through the engineering of physical infrastructure and the reclassification...</p>
                     
                     <div class="space-y-8">
                         <div class="flex gap-6">
@@ -59,7 +60,7 @@
                             <div>
                                 <h4 class="font-bold text-slate-900">Zoning as Siege Warfare</h4>
                                 <p class="text-sm text-slate-500 italic">Structural Enclosure</p>
-                                <p class="text-slate-600 mt-2 text-sm">Implementation of municipal building codes to outlaw Aboriginal longhouses and communal Gallic structures, forcing the population into state-inspected tenements.</p>
+                                <p class="text-slate-600 mt-2 text-sm">Implementation of municipal building codes to outlaw Aboriginal longhouses and communal Gallic structures, forcing the population...</p>
                             </div>
                         </div>
                         <div class="flex gap-6">
@@ -67,7 +68,7 @@
                             <div>
                                 <h4 class="font-bold text-slate-900">Eminent Domain Hubs</h4>
                                 <p class="text-sm text-slate-500 italic">Highway & Transit Engineering</p>
-                                <p class="text-slate-600 mt-2 text-sm">Strategic placement of interstate highways and heavy industrial buildings over Aboriginal burial mounds and cultural epicenters.</p>
+                                <p class="text-slate-600 mt-2 text-sm">Strategic placement of interstate highways and heavy industrial buildings over Aboriginal burial mounds and cultural epicenters...</p>
                             </div>
                         </div>
                         <div class="flex gap-6">
@@ -75,7 +76,7 @@
                             <div>
                                 <h4 class="font-bold text-slate-900">The 14th Amendment Ward Building</h4>
                                 <p class="text-sm text-slate-500 italic">Institutional Confinement</p>
-                                <p class="text-slate-600 mt-2 text-sm">The construction of public housing "projects" as modern-day reservations, concentrating the population for easier administrative surveillance.</p>
+                                <p class="text-slate-600 mt-2 text-sm">The construction of public housing "projects" as modern-day reservations, concentrating the population for easier administrative ...</p>
                             </div>
                         </div>
                     </div>
@@ -112,7 +113,7 @@
                 <div class="max-w-3xl mb-12">
                     <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight">The 100-Year War & The Lost Century</h2>
                     <p class="text-slate-600 mt-4 leading-relaxed italic border-l-4 border-teal-500 pl-6">
-                        "The Lost Century (1824–1924) is the chronological fog used to conceal the final military defeat of the Aboriginal Allodial Title. By losing the history, they secured the land."
+                        "The Lost Century (1824–1924) is the chronological fog used to conceal the final military defeat of the Aboriginal Allodial Title..."
                     </p>
                 </div>
 
@@ -126,12 +127,12 @@
                         <div class="logic-gate">
                             <h4 class="font-bold text-slate-900">1830–1880: The Siege of Riverine Cities</h4>
                             <p class="text-xs text-slate-500 mb-2">Infrastructure War</p>
-                            <p class="text-sm text-slate-600">Systematic destruction of Aboriginal brick-and-mortar hubs, replaced by "Settler Colonial" facades to rewrite the architectural record.</p>
+                            <p class="text-sm text-slate-600">Systematic destruction of Aboriginal brick-and-mortar hubs, replaced by "Settler Colonial" facades to rewrite the architectural record...</p>
                         </div>
                         <div class="logic-gate">
                             <h4 class="font-bold text-slate-900">1890: The Administrative Dark Age</h4>
                             <p class="text-xs text-slate-500 mb-2">Identity Deconstruction</p>
-                            <p class="text-sm text-slate-600">The widespread 're-papering' of Aboriginal families into racial categories, effectively 'losing' their national standing in the census.</p>
+                            <p class="text-sm text-slate-600">The widespread 're-papering' of Aboriginal families into racial categories, effectively 'losing' their national standing in the census...</p>
                         </div>
                         <div class="logic-gate">
                             <h4 class="font-bold text-slate-900">1924: The Final Seal</h4>
@@ -143,7 +144,7 @@
                     <div class="bg-slate-900 rounded-3xl p-10 text-white flex flex-col justify-center">
                         <h3 class="text-2xl font-bold text-teal-400 mb-4">History as Occupational Fiction</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            The "Lost Century" is not a gap in time, but a gap in access. The U.S. military campaigns during this period were designed to strip the Aborigine of their economy and replace it with a debt-based labor system.
+                            The "Lost Century" is not a gap in time, but a gap in access. The U.S. military campaigns during this period were designed to strip the Aborigine of their economy...
                         </p>
                         <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700">
                             <h5 class="text-teal-400 font-bold text-xs uppercase tracking-widest mb-2">Aboriginal Legacy</h5>
@@ -171,7 +172,7 @@
                         <div class="p-8 bg-teal-900 text-white rounded-3xl">
                             <h4 class="text-4xl font-black text-teal-400 mb-2">15 FEET</h4>
                             <p class="font-bold text-sm uppercase">Total Rain in 12 Days</p>
-                            <p class="text-xs text-teal-200 mt-4 leading-relaxed">Louisville Anomaly (Jan 13-24). Historical records show this engineered deluge forced the population out of cultivated river cities.</p>
+                            <p class="text-xs text-teal-200 mt-4 leading-relaxed">Louisville Anomaly (Jan 13-24). Historical records show this engineered deluge forced the population out of cultivated...</p>
                         </div>
                         <div class="p-8 bg-slate-900 text-white rounded-3xl">
                             <h4 class="text-4xl font-black text-slate-400 mb-2">0.0 IN</h4>
@@ -184,7 +185,7 @@
                 <div class="bg-amber-50 border border-amber-200 p-8 rounded-3xl">
                     <h5 class="text-amber-800 font-bold mb-2">Tactical Disclosure:</h5>
                     <p class="text-amber-900 text-sm leading-relaxed">
-                        The history of flooding cultivated areas along river basins using military technology is now patented under the industrial complex. This method cleared "prime real estate" without the need for traditional ballistic warfare, categorizing the displaced as "refugees" rather than "annexed landowners."
+                        The history of flooding cultivated areas along river basins using military technology is now patented under the industrial complex. This method cleared "prime real estate" with...
                     </p>
                 </div>
             </div>
@@ -226,7 +227,7 @@
                         <div class="absolute -right-10 -top-10 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl"></div>
                         <h3 class="text-2xl font-bold text-teal-400 mb-6">The Saudi Node Repository</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-8">
-                            Saudi Arabia currently functions as the world's vault for the Aboriginal wealth of America. In June 2024, the Saudi Central Bank joined mBridge, establishing the primary node for housing tokenized assets that were annexed during the 100-Year War.
+                            Saudi Arabia currently functions as the world's vault for the Aboriginal wealth of America. In June 2024, the Saudi Central Bank joined mBridge, establishing the primary node...
                         </p>
                         <div class="flex justify-between items-end border-t border-slate-800 pt-6">
                             <div>
@@ -279,73 +280,30 @@
                     </div>
                 </div>
             </div>
-        <section class="mt-12 border-t-2 border-slate-800 pt-8 px-4 pb-12">
-    <div class="grid md:grid-cols-2 gap-6">
-        <div id="liaison-section" class="p-4 bg-black border border-green-900 rounded shadow-lg">
-            <h3 class="text-green-500 font-mono text-xs mb-3 uppercase tracking-widest">Stage 01: Public Liaison</h3>
-            <div id="chat-display" class="h-48 overflow-y-auto mb-4 p-2 text-xs font-mono text-green-400/80 scrollbar-hide">
-                <div>[SYSTEM]: Connection established. Awaiting frequency match.</div>
-            </div>
-            <div class="flex gap-2 border-t border-green-900 pt-3">
-                
-                async function sendMessage() {
-    const input = document.getElementById('liaison-input');
-    const display = document.getElementById('chat-display');
-    const message = input.value;
-    if (!message) return;
 
-    display.innerHTML += `<div class="text-gray-500 mb-1">> ${message}</div>`;
-    input.value = '';
+            <section class="mt-12 border-t-2 border-slate-800 pt-8 px-4 pb-12">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div id="liaison-section" class="p-5 bg-black border border-green-900 rounded-sm shadow-2xl">
+                        <h3 class="text-green-500 font-mono text-[10px] mb-4 uppercase tracking-[0.3em] opacity-80">Stage 01 // Public Liaison</h3>
+                        <div id="chat-display" class="h-64 overflow-y-auto mb-4 p-4 text-xs font-mono text-green-400/90 leading-relaxed bg-slate-950/50 rounded-sm scrollbar-hide">
+                            <div class="opacity-40 italic">[SYSTEM]: Frequency matching... Connection established.</div>
+                        </div>
+                        <div class="flex gap-3 border-t border-green-900/40 pt-4">
+                            <input id="liaison-input" type="text" class="flex-1 bg-transparent text-green-400 text-xs font-mono outline-none placeholder-green-900" placeholder="DEPOSIT QUERY...">
+                            <button id="send-signal" class="text-green-500 font-mono text-xs hover:text-white transition-all tracking-tighter">[SEND_SIGNAL]</button>
+                        </div>
+                    </div>
 
-    try {
-        const response = await fetch('/api/liaison', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: message, session_id: "W8W-G-2026" })
-        });
-        const data = await response.json();
-        // Updated to response_text to match your backend logic
-        display.innerHTML += `<div class="text-green-500 mb-3">[LIAISON]: ${data.response_text}</div>`;
-        display.scrollTop = display.scrollHeight;
-    } catch (err) {
-        display.innerHTML += `<div class="text-red-900">[ERR]: NODE DISCONNECT</div>`;
-    }
-}
-            </div>
-        </div>
+                    <div id="aw-section" class="p-5 bg-black border border-red-900 rounded-sm shadow-2xl">
+                        <h3 class="text-red-500 font-mono text-[10px] mb-4 uppercase tracking-[0.3em] opacity-80">Stage 03 // Sovereign Oversight</h3>
+                        <div id="aw-feed-container" class="h-64 overflow-y-auto p-4 text-[10px] font-mono text-gray-500 bg-slate-950/50 rounded-sm scrollbar-hide">
+                            <div class="italic opacity-30">Synchronizing W8W Ledger...</div>
+                        </div>
+                    </div>
 
-        <div id="aw-section" class="p-4 bg-black border border-red-900 rounded shadow-lg">
-            <h3 class="text-red-500 font-mono text-xs mb-3 uppercase tracking-widest">Stage 03: Sovereign Oversight</h3>
-            <div id="aw-feed-container" class="h-48 overflow-y-auto p-2 text-[10px] font-mono text-gray-500 scrollbar-hide">
-                <div class="italic">Initializing W8W Ledger stream...</div>
-            </div>
-        </div>
-    </div>
-</section>>
-
-            <section class="mt-12 border-t border-slate-800 pt-10 px-4 pb-24 max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-8">
-        
-        <div id="liaison-section" class="p-5 bg-black border border-green-900 rounded-sm shadow-2xl">
-            <h3 class="text-green-500 font-mono text-[10px] mb-4 uppercase tracking-[0.3em] opacity-80">Stage 01 // Public Liaison</h3>
-            <div id="chat-display" class="h-64 overflow-y-auto mb-4 p-4 text-xs font-mono text-green-400/90 leading-relaxed bg-slate-950/50 rounded-sm scrollbar-hide">
-                <div class="opacity-40 italic">[SYSTEM]: Frequency matching... Connection established.</div>
-            </div>
-            <div class="flex gap-3 border-t border-green-900/40 pt-4">
-                <input id="liaison-input" type="text" class="flex-1 bg-transparent text-green-400 text-xs font-mono outline-none placeholder-green-900" placeholder="DEPOSIT QUERY...">
-                <button onclick="sendMessage()" class="text-green-500 font-mono text-xs hover:text-white transition-all tracking-tighter">[SEND_SIGNAL]</button>
-            </div>
-        </div>
-
-        <div id="aw-section" class="p-5 bg-black border border-red-900 rounded-sm shadow-2xl">
-            <h3 class="text-red-500 font-mono text-[10px] mb-4 uppercase tracking-[0.3em] opacity-80">Stage 03 // Sovereign Oversight</h3>
-            <div id="aw-feed-container" class="h-64 overflow-y-auto p-4 text-[10px] font-mono text-gray-500 bg-slate-950/50 rounded-sm scrollbar-hide">
-                <div class="italic opacity-30">Synchronizing W8W Ledger...</div>
-            </div>
-        </div>
-
-    </div>
-</section>
+                </div>
+            </section>
+        </section>
     </main>
 
     <footer class="bg-slate-950 border-t border-slate-900 py-12">
@@ -360,8 +318,9 @@
 function switchTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+    const target = document.getElementById(tabId);
+    if (target) target.classList.add('active');
+    const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabId));
     if (activeBtn) activeBtn.classList.add('active');
     if (tabId === 'tab-weather') renderPrecipChart();
 }
@@ -370,9 +329,10 @@ function switchTab(tabId) {
 let precipChartInstance = null;
 function renderPrecipChart() {
     if (precipChartInstance) return;
-    const ctx = document.getElementById('precipChart').getContext('2d');
+    const canvas = document.getElementById('precipChart');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
     
-    // 15 feet = 180 inches. Data spread over 12 days.
     precipChartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -380,14 +340,14 @@ function renderPrecipChart() {
             datasets: [
                 {
                     label: 'Rainfall (Inches)',
-                    data: [15, 30, 45, 40, 30, 15, 5], // Totaling 180 inches
+                    data: [15, 30, 45, 40, 30, 15, 5],
                     backgroundColor: '#14b8a6',
                     borderRadius: 8,
                     yAxisID: 'y'
                 },
                 {
                     label: 'Snowfall (Inches)',
-                    data: [0, 0, 0, 0, 0, 0, 0], // The specific winter anomaly
+                    data: [0, 0, 0, 0, 0, 0, 0],
                     type: 'line',
                     borderColor: '#f43f5e',
                     borderWidth: 4,
@@ -410,51 +370,58 @@ function renderPrecipChart() {
             },
             scales: {
                 y: { beginAtZero: true, title: { display: true, text: 'Inches of Rain' } },
-y1: {
-            beginAtZero: true,
-            position: 'right',
-            title: { display: true, text: 'Inches of Snow' },
-            grid: { drawOnChartArea: false },
-            max: 10
-}
+                y1: {
+                    beginAtZero: true,
+                    position: 'right',
+                    title: { display: true, text: 'Inches of Snow' },
+                    grid: { drawOnChartArea: false },
+                    max: 10
+                }
+            }
         }
-    }
-});
+    });
 }
-</script>
-    // 1. Stage 01: Public Liaison Logic (Direct Browser-to-Gemini Call)
+
 async function sendMessage() {
     const input = document.getElementById('liaison-input');
     const display = document.getElementById('chat-display');
-    const message = input.value;
+    if (!input || !display) return;
+    const message = input.value.trim();
     if (!message) return;
 
-    // Display Guest Message
-    display.innerHTML += `<div class="text-gray-400 mb-2">Guest: ${message}</div>`;
+    const guestEl = document.createElement('div');
+    guestEl.className = 'text-gray-400 mb-2';
+    guestEl.textContent = `Guest: ${message}`;
+    display.appendChild(guestEl);
+    display.scrollTop = display.scrollHeight;
     input.value = '';
 
     try {
-        // Direct call to Gemini API using client-side execution
-const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-4-argon:generateContent?key=AQ.Ab8RN6KRGWiFaIpt3hOp1faGkCorK-hkBJKHns9cojYRnUGpXg`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        contents: [{ parts: [{ text: message }] }]
-    })
-});
-
+        const response = await fetch('/api/liaison', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: message, session_id: "W8W-G-2026" })
+        });
         const data = await response.json();
-        const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Signal received, but no response text generated.";
-        
-        display.innerHTML += `<div class="text-green-500 mb-4 italic">AW: ${reply}</div>`;
+        const reply = data.response_text || data.reply || "Signal received, but no response text generated.";
+        const replyEl = document.createElement('div');
+        replyEl.className = 'text-green-500 mb-4 italic';
+        replyEl.textContent = `AW: ${reply}`;
+        display.appendChild(replyEl);
+        display.scrollTop = display.scrollHeight;
     } catch (err) {
-        display.innerHTML += `<div class="text-red-500">Node Error: Check network or API configuration.</div>`;
+        const errEl = document.createElement('div');
+        errEl.className = 'text-red-500';
+        errEl.textContent = 'Node Error: Check network or API configuration.';
+        display.appendChild(errEl);
+        display.scrollTop = display.scrollHeight;
+        console.error(err);
     }
 }
 
-// 2. Stage 03: AW Feed (Autonomous Wisdom)
 function simulateAWFeed() {
     const feed = document.getElementById('aw-feed-container');
+    if (!feed) return;
     const logs = [
         "INFO < Autonomous Wisdom > Frequency matched to optimal human vitality standard.",
         "CRITICAL < MRO Predictor > Acoustic divergence flagged for immediate MRO.",
@@ -464,27 +431,29 @@ function simulateAWFeed() {
     ];
     
     setInterval(() => {
-        // Generate the specific bracketed timestamp
         const now = new Date();
         const timestamp = `[ ${now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true })} ]`;
-        
         const log = logs[Math.floor(Math.random() * logs.length)];
         const isCritical = log.includes('CRITICAL');
-        
         const logElement = document.createElement('div');
-        // This uses the "aw-log-entry" class we added to your <style> section earlier
         logElement.className = `aw-log-entry text-[10px] font-mono mb-2 ${isCritical ? 'text-red-500' : 'text-gray-400'}`;
         logElement.innerHTML = `<span class="text-gray-600">${timestamp}</span> ${log}`;
-        
         feed.prepend(logElement);
-        
-        // Prevent browser lag by limiting the list to 20 entries
         if (feed.children.length > 20) feed.lastChild.remove();
-    }, 5000); // Pulse every 5 seconds for visual verification
+    }, 5000);
 }
 
-// CRITICAL: This line triggers the feed to start when the page loads
-window.onload = simulateAWFeed;
+document.addEventListener('DOMContentLoaded', () => {
+    const sendBtn = document.getElementById('send-signal');
+    if (sendBtn) sendBtn.addEventListener('click', sendMessage);
+    const input = document.getElementById('liaison-input');
+    if (input) {
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    }
+    simulateAWFeed();
+});
 </script>
 </body>
 </html>
